@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Tokyo Night design tokens.
+ * Stored as HSL channels (without the hsl() wrapper) so Tailwind's
+ * `hsl(var(--token))` bridge in tailwind.config.ts works, and so we can
+ * apply alpha via `/ <alpha-value>` where needed.
+ *
+ * Dark is the default theme (next-themes `defaultTheme="dark"`).
+ */
+@layer base {
+  :root {
+    /* ---- Dark (default) — GitHub-dark / Tokyo Night ---- */
+    --background: 213 30% 7%; /* #0D1117 */
+    --foreground: 213 17% 83%; /* #C9D1D9 */
+
+    --card: 215 21% 11%; /* #161B22 */
+    --card-foreground: 213 17% 83%;
+
+    --secondary: 215 21% 11%; /* #161B22 */
+    --secondary-foreground: 213 17% 83%;
+
+    --muted: 215 21% 11%;
+    --muted-foreground: 215 11% 57%; /* #8B949E */
+
+    --primary: 212 100% 67%; /* #58A6FF */
+    --primary-foreground: 213 30% 7%;
+
+    --accent: 212 100% 67%; /* #58A6FF */
+    --accent-foreground: 213 30% 7%;
+
+    --border: 215 14% 21%; /* #30363D */
+    --input: 215 14% 21%;
+    --ring: 212 100% 67%;
+
+    --radius: 0.65rem;
+  }
+
+  .light {
+    /* ---- Light — clean, soft, accent preserved ---- */
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
+
+    --card: 210 20% 99%;
+    --card-foreground: 215 28% 17%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 28% 17%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 14% 40%;
+
+    --primary: 212 92% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 212 92% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 212 92% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Offset anchored scroll targets so the sticky navbar never covers headings. */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Respect users who prefer reduced motion: neutralize animations/transitions. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Refined focus ring for keyboard users (mouse clicks don't trigger it). */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Tokyo-Night-friendly text selection. */
+  ::selection {
+    background-color: hsl(var(--primary) / 0.25);
+    color: hsl(var(--foreground));
+  }
+
+  /* Slim, themed scrollbar. */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 9999px;
+    border: 2px solid hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+@layer components {
+  /* Soft radial backdrop glow used behind section headings / hero. */
+  .glow-grid {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      hsl(var(--border) / 0.6) 1px,
+      transparent 0
+    );
+    background-size: 32px 32px;
+  }
+
+  /* Gradient text used for emphasized words in headings. */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-sky-400 to-primary bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  
+  <defs>
+    <radialGradient id="glow-og" cx="22%" cy="18%" r="80%">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0.32"/>
+      <stop offset="55%" stop-color="#58A6FF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheen-og" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="dots-og" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#30363D" fill-opacity="0.55"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#0D1117"/>
+  <rect width="1200" height="630" fill="url(#dots-og)"/>
+  <rect width="1200" height="630" fill="url(#glow-og)"/>
+  <text x="90" y="200" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="32" fill="#58A6FF">const developer =</text>
+  <text x="90" y="330" font-family="Inter, system-ui, sans-serif" font-size="96" font-weight="800" fill="#C9D1D9">Zain M. Al-Mawla</text>
+  <text x="90" y="410" font-family="Inter, system-ui, sans-serif" font-size="44" font-weight="600" fill="#58A6FF">Fullstack Developer</text>
+  <text x="90" y="480" font-family="Inter, system-ui, sans-serif" font-size="32" fill="#8B949E">Modern web experiences &amp; AI-powered tools · Ankara, Turkey</text>
+</svg>
