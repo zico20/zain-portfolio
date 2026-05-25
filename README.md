@@ -8,7 +8,7 @@ A modern, fully responsive personal portfolio with a dark **Tokyo Night** aesthe
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-0055FF?logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-58A6FF.svg)](#license)
 
-> **Live demo:** _coming soon_ — replace this line with your Vercel URL after deploying.
+> **Live demo:** **[zain-portfolio-nu.vercel.app](https://zain-portfolio-nu.vercel.app)**
 
 ---
 
