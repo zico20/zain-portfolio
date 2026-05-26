@@ -15,7 +15,7 @@ const stats = [
 
 const paragraphs = [
   "I’m Zain — a fullstack developer based in Ankara, Turkey. I build software end to end, from database schemas and APIs to the pixels users actually touch.",
-  "Day to day I work across the stack with Next.js, React, and TypeScript on the frontend, and Python, FastAPI, and Node on the backend. Lately I’ve been training and shipping my own AI models — like a wildfire-risk predictor and a math-solving assistant.",
+  "Day to day I work across the stack with Next.js, React, and TypeScript on the frontend, and Python, FastAPI, and Node on the backend. Lately I’ve been training and fine-tuning ML and AI models for real problems — a wildfire-risk model trained on Google Earth Engine data, and a math assistant fine-tuned from Qwen.",
   "What drives me is the craft: clean, accessible interfaces, code that’s a pleasure to maintain, and products that feel fast and considered. I care about the details most people never notice — because they’re what separate good from great.",
 ];
 

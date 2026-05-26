@@ -26,7 +26,7 @@ export const projects: Project[] = [
     slug: "hazardsignal",
     title: "HazardSignal",
     description:
-      "Wildfire prediction system for Antalya that forecasts ignition risk from weather and terrain data using a trained ML model.",
+      "Wildfire prediction system for Antalya that forecasts ignition risk using an ML model trained on Google Earth Engine satellite and terrain data.",
     tags: ["Python", "PyTorch", "FastAPI", "React"],
     image: "/projects/hazardsignal.svg",
     liveUrl: null,
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     slug: "ai-scientific-calculator",
     title: "AI Scientific Calculator",
     description:
-      "A smart scientific calculator powered by a locally-trained AI math model that parses and solves natural-language expressions.",
+      "A smart scientific calculator powered by an AI math model fine-tuned from Qwen that parses and solves natural-language expressions.",
     tags: ["Python", "PyTorch", "Next.js"],
     image: "/projects/ai-scientific-calculator.svg",
     liveUrl: null,
