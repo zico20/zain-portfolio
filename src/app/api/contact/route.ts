@@ -1,25 +1,20 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
 import { contactSchema } from "@/lib/contact-schema";
+import { siteConfig } from "@/lib/site";
 
 /**
  * POST /api/contact
  *
- * Validates a contact submission server-side and (for now) logs it.
+ * Validates a contact submission server-side, then delivers it by email via
+ * Resend. If Resend isn't configured (no RESEND_API_KEY — e.g. local dev),
+ * it falls back to logging the submission so the form still "works" without
+ * crashing.
  *
- * TODO: Wire up real delivery. The recommended path is Resend:
- *   1. `npm install resend`
- *   2. Add RESEND_API_KEY + CONTACT_TO_EMAIL to your env (see .env.example)
- *   3. Replace the "deliver" block below with:
- *        const { Resend } = await import("resend");
- *        const resend = new Resend(process.env.RESEND_API_KEY);
- *        await resend.emails.send({
- *          from: "Portfolio <onboarding@resend.dev>",
- *          to: process.env.CONTACT_TO_EMAIL!,
- *          replyTo: data.email,
- *          subject: `New message from ${data.name}`,
- *          text: data.message,
- *        });
+ * Required env (production): see .env.example
+ *   - RESEND_API_KEY   — your Resend API key
+ *   - CONTACT_TO_EMAIL — where submissions are delivered (defaults to siteConfig.email)
  */
 export async function POST(request: Request) {
   let body: unknown;
@@ -51,21 +46,56 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  // --- deliver (placeholder) ---
-  // Until email delivery is wired up, record the submission server-side.
-  // Using console.error keeps this visible in server logs without tripping
-  // the no-console lint rule (which permits warn/error).
-  if (process.env.NODE_ENV !== "production") {
-    // eslint-disable-next-line no-console
-    console.info("[contact] new submission", {
-      name: data.name,
-      email: data.email,
-      message: data.message,
-      at: new Date().toISOString(),
-    });
+  const apiKey = process.env.RESEND_API_KEY;
+  const toEmail = process.env.CONTACT_TO_EMAIL ?? siteConfig.email;
+
+  // No API key configured (e.g. local dev) — log and succeed gracefully.
+  if (!apiKey) {
+    if (process.env.NODE_ENV !== "production") {
+      // eslint-disable-next-line no-console
+      console.info("[contact] RESEND_API_KEY not set — logging only", {
+        name: data.name,
+        email: data.email,
+        at: new Date().toISOString(),
+      });
+    }
+    return NextResponse.json({ ok: true });
   }
 
-  return NextResponse.json({ ok: true });
+  try {
+    const resend = new Resend(apiKey);
+    const { error } = await resend.emails.send({
+      // The verified Resend test sender; swap for your domain once verified.
+      from: `${siteConfig.name} Portfolio <onboarding@resend.dev>`,
+      to: [toEmail],
+      replyTo: data.email,
+      subject: `New portfolio message from ${data.name}`,
+      text: [
+        `Name:  ${data.name}`,
+        `Email: ${data.email}`,
+        "",
+        data.message,
+      ].join("\n"),
+    });
+
+    if (error) {
+      // eslint-disable-next-line no-console
+      console.error("[contact] Resend returned an error:", error);
+      return NextResponse.json(
+        { ok: false, error: "Could not send your message. Please try again." },
+        { status: 502 },
+      );
+    }
+
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error("[contact] Unexpected send failure:", err);
+    return NextResponse.json(
+      { ok: false, error: "Could not send your message. Please try again." },
+      { status: 500 },
+    );
+  }
 }
 
 /** Reject non-POST methods with a clear 405. */
