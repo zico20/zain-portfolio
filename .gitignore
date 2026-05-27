@@ -38,3 +38,6 @@ next-env.d.ts
 
 # original avatar source — the published copy lives at public/zain.jpg
 /image
+
+# Claude Code local settings
+.claude/
