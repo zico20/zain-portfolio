@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Personal portfolio of Zain M. Al-Mawla — Fullstack Developer based in Ankara, Turkey.",
-  "author": "Zain M. Al-Mawla <dydx4422@gmail.com>",
+  "author": "Zain M. Al-Mawla <zainalmawla11@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",

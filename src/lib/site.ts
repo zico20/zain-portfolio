@@ -14,7 +14,7 @@ export const siteConfig = {
   // Resolved from NEXT_PUBLIC_SITE_URL at build time; falls back to localhost.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   ogImage: "/og.png",
-  email: "dydx4422@gmail.com",
+  email: "zainalmawla11@gmail.com",
   links: {
     github: "https://github.com/zico20",
     // TODO: replace with the real LinkedIn profile URL when available.
