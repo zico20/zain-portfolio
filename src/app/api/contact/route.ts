@@ -65,8 +65,9 @@ export async function POST(request: Request) {
   try {
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
-      // The verified Resend test sender; swap for your domain once verified.
-      from: `${siteConfig.name} Portfolio <onboarding@resend.dev>`,
+      // Verified custom domain on Resend — sends from your own address and to
+      // any inbox (no longer limited to the Resend account owner).
+      from: `${siteConfig.name} Portfolio <contact@zainalmawla.dev>`,
       to: [toEmail],
       replyTo: data.email,
       subject: `New portfolio message from ${data.name}`,
