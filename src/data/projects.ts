@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "Wildfire prediction system for Antalya that forecasts ignition risk using an ML model trained on Google Earth Engine satellite and terrain data.",
     tags: ["Python", "PyTorch", "FastAPI", "React"],
     image: "/projects/hazardsignal.svg",
-    liveUrl: null,
+    liveUrl: "https://hazardsignal.com",
     repoUrl: "https://github.com/zico20",
     featured: true,
   },
