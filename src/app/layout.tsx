@@ -83,6 +83,39 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+    other: {
+      "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION ?? "",
+    },
+  },
+};
+
+/** JSON-LD: tells Google that the site represents a real Person. */
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: siteConfig.name,
+  jobTitle: siteConfig.role,
+  url: siteConfig.url,
+  email: `mailto:${siteConfig.email}`,
+  image: `${siteConfig.url}/zain.jpg`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Thi-Qar",
+    addressCountry: "IQ",
+  },
+  sameAs: [siteConfig.links.github, siteConfig.links.linkedin],
+  knowsAbout: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "FastAPI",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "Full-Stack Web Development",
+  ],
 };
 
 export const viewport: Viewport = {
@@ -99,6 +132,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}
       >
