@@ -10,7 +10,7 @@ export const siteConfig = {
   tagline:
     "I design and build modern full-stack web experiences from Thi-Qar, Iraq.",
   description:
-    "Zain M. Al-Mawla is a fullstack developer based in Thi-Qar, Iraq, designing and building modern, production-grade web applications with Next.js, React, TypeScript, FastAPI, and PostgreSQL.",
+    "Fullstack developer based in Thi-Qar, Iraq, building modern web apps with Next.js, React, TypeScript, FastAPI, and PostgreSQL.",
   // Resolved from NEXT_PUBLIC_SITE_URL at build time; falls back to localhost.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   ogImage: "/og.png",
