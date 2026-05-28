@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
 
 import { Section, fadeUp, stagger } from "@/components/section";
 
@@ -14,8 +13,8 @@ const stats = [
 ];
 
 const paragraphs = [
-  "I’m Zain — a fullstack developer based in Ankara, Turkey. I build software end to end, from database schemas and APIs to the pixels users actually touch.",
-  "Day to day I work across the stack with Next.js, React, and TypeScript on the frontend, and Python, FastAPI, and Node on the backend. Lately I’ve been training and fine-tuning ML and AI models for real problems — a wildfire-risk model trained on Google Earth Engine data, and a math assistant fine-tuned from Qwen.",
+  "I’m Zain — a fullstack developer based in Thi-Qar, Iraq. I build software end to end, from database schemas and APIs to the pixels users actually touch.",
+  "Day to day I work across the stack with Next.js, React, and TypeScript on the frontend, and Node, FastAPI, and PostgreSQL on the backend. I’ve shipped production work for clients across MENA and Europe — landing pages, dashboards, e-commerce, and SaaS — handling scoping, design hand-off, implementation, and Vercel deployment myself.",
   "What drives me is the craft: clean, accessible interfaces, code that’s a pleasure to maintain, and products that feel fast and considered. I care about the details most people never notice — because they’re what separate good from great.",
 ];
 
@@ -129,14 +128,25 @@ function AvatarCard() {
             <span className="font-semibold text-[#2EA043]">$</span>
             <span className="text-muted-foreground">whoami</span>
             <span className="ml-auto font-semibold text-foreground">
-              zain@ankara
+              zain@thiqar
             </span>
           </div>
         </div>
       </div>
 
-      {/* "Available for work" badge — sits BELOW the card (no overlap). */}
-      <div className="mt-4 flex justify-center lg:justify-start">
+      {/* "Available for work" badge — floats over the top-left of the card. */}
+      <div className="absolute -left-3 -top-3 hidden items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 shadow-lg sm:flex">
+        <span className="relative flex h-2.5 w-2.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#2EA043] opacity-75" />
+          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#2EA043]" />
+        </span>
+        <span className="text-xs font-semibold text-foreground">
+          Available for work
+        </span>
+      </div>
+
+      {/* Mobile fallback: badge BELOW the card (chips don't render at < sm). */}
+      <div className="mt-4 flex justify-center sm:hidden">
         <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-2 shadow-sm">
           <span className="relative flex h-2.5 w-2.5">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#2EA043] opacity-75" />
@@ -146,14 +156,6 @@ function AvatarCard() {
             Available for work
           </span>
         </div>
-      </div>
-
-      {/* Floating accent chip top-left */}
-      <div className="absolute -left-3 -top-3 hidden items-center gap-1.5 rounded-full border border-primary/40 bg-card px-3 py-1.5 shadow-lg sm:flex">
-        <Sparkles className="h-3.5 w-3.5 text-primary" />
-        <span className="font-mono text-xs font-semibold text-primary">
-          builds AI
-        </span>
       </div>
     </div>
   );

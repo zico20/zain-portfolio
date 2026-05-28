@@ -6,15 +6,13 @@ export interface ExperienceItem {
   company: string;
   /** Human-readable date range, e.g. "2023 — Present". */
   period: string;
-  /** 2-3 short accomplishment bullets. */
+  /** Short accomplishment bullets. */
   points: string[];
 }
 
 /**
  * Edit this array to update the Experience timeline.
  * Entries render newest-first (top to bottom).
- *
- * NOTE: Placeholder content — replace with real roles.
  */
 export const experiences: ExperienceItem[] = [
   {
@@ -23,31 +21,12 @@ export const experiences: ExperienceItem[] = [
     company: "Self-Employed",
     period: "2023 — Present",
     points: [
-      "Design and ship end-to-end web apps for clients across MENA and Europe using Next.js, FastAPI, and PostgreSQL.",
-      "Built AI-powered features — from a wildfire risk model to a math-solving assistant — by training and serving custom PyTorch models.",
-      "Own the full delivery cycle: scoping, architecture, implementation, and Vercel deployment.",
-    ],
-  },
-  {
-    id: "backend-engineer",
-    role: "Backend Engineer",
-    company: "Tech Startup",
-    period: "2022 — 2023",
-    points: [
-      "Developed REST APIs in Django and Express serving 10k+ monthly active users.",
-      "Optimized slow PostgreSQL queries and added caching, cutting median response time by ~40%.",
-      "Containerized services with Docker and set up CI to make deploys repeatable.",
-    ],
-  },
-  {
-    id: "frontend-developer",
-    role: "Frontend Developer",
-    company: "Digital Agency",
-    period: "2021 — 2022",
-    points: [
-      "Built responsive, accessible marketing sites and dashboards in React and Vue.",
-      "Translated Figma designs into pixel-accurate, mobile-first interfaces.",
-      "Collaborated with designers to establish a reusable component library.",
+      "Design and ship end-to-end web apps for clients across MENA and Europe, using Next.js, TypeScript, FastAPI, and PostgreSQL.",
+      "Own the full delivery cycle: scoping, technical architecture, UI/UX implementation, deployment, and post-launch iteration.",
+      "Translate Figma designs into pixel-accurate, mobile-first interfaces with Tailwind CSS, shadcn/ui, and Framer Motion.",
+      "Build production REST and server-side APIs with authentication, role-based access, payments (Stripe), and email delivery (Resend).",
+      "Tune performance and SEO — image optimization, route caching, edge rendering, and Lighthouse scores in the 95+ range.",
+      "Deploy to Vercel with custom domains, environment-specific configs, and CI that runs typecheck, lint, and build on every push.",
     ],
   },
 ];

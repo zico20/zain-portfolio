@@ -26,8 +26,8 @@ export const projects: Project[] = [
     slug: "hazardsignal",
     title: "HazardSignal",
     description:
-      "Wildfire prediction system for Antalya that forecasts ignition risk using an ML model trained on Google Earth Engine satellite and terrain data.",
-    tags: ["Python", "PyTorch", "FastAPI", "React"],
+      "A wildfire risk web platform for Antalya — interactive risk maps, daily forecasts, and a public API. Built with a FastAPI backend, a React frontend, and a PostgreSQL data layer.",
+    tags: ["React", "FastAPI", "PostgreSQL", "Mapbox"],
     image: "/projects/hazardsignal.svg",
     liveUrl: "https://hazardsignal.com",
     repoUrl: "https://github.com/zico20/Hazardsignal",
@@ -37,8 +37,8 @@ export const projects: Project[] = [
     slug: "numina",
     title: "Numina",
     description:
-      "Numina is a smart scientific calculator powered by an AI math model fine-tuned from Qwen — it parses natural-language expressions and solves them step by step.",
-    tags: ["Python", "PyTorch", "Next.js"],
+      "A smart scientific calculator web app that parses natural-language math expressions and walks through the solution step by step, with a clean Next.js interface and a FastAPI compute layer.",
+    tags: ["Next.js", "TypeScript", "FastAPI", "Tailwind"],
     image: "/projects/numina.svg",
     liveUrl: null,
     repoUrl: "https://github.com/zico20",

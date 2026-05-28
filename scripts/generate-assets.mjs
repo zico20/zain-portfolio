@@ -101,7 +101,7 @@ function ogCard() {
   <text x="${padX}" y="200" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="32" fill="${palette.accent}">const developer =</text>
   <text x="${padX}" y="330" font-family="Inter, system-ui, sans-serif" font-size="96" font-weight="800" fill="${palette.text}">Zain M. Al-Mawla</text>
   <text x="${padX}" y="410" font-family="Inter, system-ui, sans-serif" font-size="44" font-weight="600" fill="${palette.accent}">Fullstack Developer</text>
-  <text x="${padX}" y="480" font-family="Inter, system-ui, sans-serif" font-size="32" fill="${palette.muted}">Modern web experiences &amp; AI-powered tools · Ankara, Turkey</text>
+  <text x="${padX}" y="480" font-family="Inter, system-ui, sans-serif" font-size="32" fill="${palette.muted}">Modern full-stack web experiences · Thi-Qar, Iraq</text>
 </svg>`;
 }
 
@@ -114,8 +114,8 @@ function favicon() {
 }
 
 const covers = [
-  { slug: "hazardsignal", title: "HazardSignal", tags: ["Python", "PyTorch", "FastAPI", "React"], accent: "#FF7B72" },
-  { slug: "numina", title: "Numina", tags: ["Python", "PyTorch", "Next.js"], accent: "#58A6FF" },
+  { slug: "hazardsignal", title: "HazardSignal", tags: ["React", "FastAPI", "PostgreSQL", "Mapbox"], accent: "#FF7B72" },
+  { slug: "numina", title: "Numina", tags: ["Next.js", "TypeScript", "FastAPI", "Tailwind"], accent: "#58A6FF" },
   { slug: "taskflow", title: "TaskFlow", tags: ["Next.js", "FastAPI", "PostgreSQL"], accent: "#7EE787" },
   { slug: "nexshop", title: "NexShop", tags: ["Next.js", "Supabase", "Stripe"], accent: "#D2A8FF" },
 ];

@@ -181,9 +181,9 @@ The site favicon is a monogram **`Z`** in `#58A6FF` on a `#161B22` rounded squar
 ### 6.1 Voice Principles
 
 - **Direct over clever.** "I build software end to end" beats "I craft digital experiences."
-- **Specific over generic.** Always name the tech: "Next.js, FastAPI, PyTorch" — never "modern tools."
-- **Honest about scope.** Distinguish "trained on X data" from "fine-tuned from Y model." Accuracy compounds credibility.
-- **No emoji in body copy.** A 🇹🇷 in the editor card is allowed; nowhere else in prose.
+- **Specific over generic.** Always name the tech: "Next.js, FastAPI, PostgreSQL" — never "modern tools."
+- **Honest about scope.** Claim what was built, not what was implied. Accuracy compounds credibility.
+- **No emoji in body copy.** A 🇮🇶 in the editor card is allowed; nowhere else in prose.
 
 ### 6.2 Tone by Surface
 

@@ -220,5 +220,5 @@ vercel --prod # production
 
 ---
 
-<p align="center">Built with Next.js and Tailwind — from Ankara, Turkey 🇹🇷</p>
+<p align="center">Built with Next.js and Tailwind — from Thi-Qar, Iraq 🇮🇶</p>
 ```

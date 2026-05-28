@@ -6,11 +6,11 @@ export const siteConfig = {
   name: "Zain M. Al-Mawla",
   shortName: "Zain Al-Mawla",
   role: "Fullstack Developer",
-  location: "Ankara, Turkey",
+  location: "Thi-Qar, Iraq",
   tagline:
-    "I build modern web experiences and AI-powered tools from Ankara, Turkey.",
+    "I design and build modern full-stack web experiences from Thi-Qar, Iraq.",
   description:
-    "Zain M. Al-Mawla is a fullstack developer based in Ankara, Turkey, building modern web experiences and AI-powered tools with Next.js, React, Python, and PyTorch.",
+    "Zain M. Al-Mawla is a fullstack developer based in Thi-Qar, Iraq, designing and building modern, production-grade web applications with Next.js, React, TypeScript, FastAPI, and PostgreSQL.",
   // Resolved from NEXT_PUBLIC_SITE_URL at build time; falls back to localhost.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   ogImage: "/og.png",

@@ -64,15 +64,6 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    id: "ai-data",
-    title: "AI / Data",
-    skills: [
-      { name: "PyTorch", icon: "pytorch" },
-      { name: "Pandas", icon: "pandas" },
-      { name: "NumPy", icon: "numpy" },
-    ],
-  },
-  {
     id: "tools",
     title: "Tools",
     skills: [

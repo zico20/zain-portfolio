@@ -11,14 +11,14 @@ import { Button } from "@/components/ui/button";
 import { useTypewriter } from "@/hooks/use-typewriter";
 import { TechIcon, type TechIconName } from "@/components/tech-icon";
 
-const ROLES = ["Fullstack Developer", "AI Enthusiast", "Problem Solver"];
+const ROLES = ["Fullstack Developer", "Next.js Specialist", "Problem Solver"];
 
 /** Subtle floating icons in the background. Positions are percentage-based. */
 const FLOATERS: { name: TechIconName; top: string; left: string; size: number; delay: number }[] = [
   { name: "react", top: "18%", left: "8%", size: 46, delay: 0 },
-  { name: "python", top: "65%", left: "12%", size: 40, delay: 0.6 },
+  { name: "nodejs", top: "65%", left: "12%", size: 40, delay: 0.6 },
   { name: "nextjs", top: "28%", left: "85%", size: 44, delay: 1.1 },
-  { name: "pytorch", top: "72%", left: "80%", size: 38, delay: 0.3 },
+  { name: "postgresql", top: "72%", left: "80%", size: 38, delay: 0.3 },
   { name: "docker", top: "12%", left: "60%", size: 34, delay: 0.9 },
   { name: "fastapi", top: "82%", left: "45%", size: 36, delay: 1.4 },
 ];

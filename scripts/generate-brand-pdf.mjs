@@ -410,10 +410,10 @@ function buildHtml() {
   </div>
   <div class="meta">
     <div><b>Discipline</b><br/>Fullstack Developer</div>
-    <div><b>Base</b><br/>Ankara, Turkey</div>
+    <div><b>Base</b><br/>Thi-Qar, Iraq</div>
     <div><b>Site</b><br/>zainalmawla.dev</div>
     <div><b>Contact</b><br/>contact@zainalmawla.dev</div>
-    <div><b>Stack</b><br/>Next.js · React · TS · Python · PyTorch</div>
+    <div><b>Stack</b><br/>Next.js · React · TS · Node · FastAPI</div>
     <div><b>Issued</b><br/>May 2026 · v1.0</div>
   </div>
   <div class="footer">
@@ -481,13 +481,13 @@ function buildHtml() {
   <div class="type-spec">
     <div class="label">// Inter — body & headings</div>
     <div class="sample-inter" style="font-size:32pt; font-weight:800; letter-spacing:-0.02em; line-height:1.1;">Hi, I&apos;m <span style="color:var(--primary);">Zain.</span></div>
-    <div class="sample-inter" style="font-size:14pt; color:var(--muted); margin-top:3mm;">I build modern web experiences and AI-powered tools.</div>
+    <div class="sample-inter" style="font-size:14pt; color:var(--muted); margin-top:3mm;">I design and build modern full-stack web experiences.</div>
     <div class="sample-inter" style="font-size:10pt; color:var(--fg); margin-top:3mm;">Body copy at 11pt — direct, technical, calm. Bold for headings, regular for prose.</div>
   </div>
 
   <div class="type-spec">
     <div class="label">// JetBrains Mono — code, eyebrows, badges</div>
-    <div class="sample-mono" style="font-size:16pt; color:var(--fg);">$ whoami → <span style="color:var(--primary);">zain@ankara</span></div>
+    <div class="sample-mono" style="font-size:16pt; color:var(--fg);">$ whoami → <span style="color:var(--primary);">zain@thiqar</span></div>
     <div class="sample-mono" style="font-size:9pt; color:var(--muted); margin-top:3mm;">01. ABOUT · 02. TECH STACK · 03. PROJECTS · 04. EXPERIENCE · 05. CONTACT</div>
   </div>
 
@@ -518,7 +518,7 @@ function buildHtml() {
     <pre><span class="k">const</span> <span class="v">zain</span> <span class="o">=</span> {
   name<span class="o">:</span> <span class="s">&apos;Zain M. Al-Mawla&apos;</span>,
   role<span class="o">:</span> <span class="s">&apos;Fullstack Developer&apos;</span>,
-  stack<span class="o">:</span> [<span class="s">&apos;Next.js&apos;</span>, <span class="s">&apos;Python&apos;</span>, <span class="s">&apos;PyTorch&apos;</span>],
+  stack<span class="o">:</span> [<span class="s">&apos;Next.js&apos;</span>, <span class="s">&apos;FastAPI&apos;</span>, <span class="s">&apos;PostgreSQL&apos;</span>],
   <span class="f">available</span><span class="o">:</span> <span class="v">true</span>,
 }</pre>
   </div>
@@ -565,15 +565,15 @@ function buildHtml() {
         <td>“I craft digital experiences.”</td>
       </tr>
       <tr>
-        <td>“fine-tuned from Qwen on math problems”</td>
-        <td>“my own AI models”</td>
+        <td>“shipped end-to-end with Next.js + FastAPI”</td>
+        <td>“delivered a digital transformation”</td>
       </tr>
       <tr>
-        <td>Name the tech: Next.js, FastAPI, PyTorch.</td>
+        <td>Name the tech: Next.js, FastAPI, PostgreSQL.</td>
         <td>Vague tooling: “modern stack,” “cutting-edge.”</td>
       </tr>
       <tr>
-        <td>Honor scope. Distinguish trained from fine-tuned.</td>
+        <td>Claim what was built, not what was implied.</td>
         <td>Inflate scope. Skip past the credibility check.</td>
       </tr>
     </tbody>

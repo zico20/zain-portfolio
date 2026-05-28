@@ -84,7 +84,7 @@ export default function OpengraphImage() {
             marginTop: 18,
           }}
         >
-          Modern web experiences & AI-powered tools · {siteConfig.location}
+          Modern full-stack web experiences · {siteConfig.location}
         </div>
       </div>
     ),
