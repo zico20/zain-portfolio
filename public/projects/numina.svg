@@ -20,7 +20,7 @@
   <rect width="1200" height="630" fill="url(#sheen-p)"/>
   <rect x="0" y="0" width="1200" height="8" fill="#58A6FF"/>
   <text x="80" y="150" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="30" fill="#8B949E">&lt;project /&gt;</text>
-  <text x="80" y="300" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="700" fill="#C9D1D9">AI Calculator</text>
+  <text x="80" y="300" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="700" fill="#C9D1D9">Numina</text>
   <line x1="80" y1="360" x2="1120" y2="360" stroke="#30363D" stroke-opacity="0.6"/>
   
       <g transform="translate(80, 470)">

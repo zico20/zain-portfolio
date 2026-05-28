@@ -115,7 +115,7 @@ function favicon() {
 
 const covers = [
   { slug: "hazardsignal", title: "HazardSignal", tags: ["Python", "PyTorch", "FastAPI", "React"], accent: "#FF7B72" },
-  { slug: "ai-scientific-calculator", title: "AI Calculator", tags: ["Python", "PyTorch", "Next.js"], accent: "#58A6FF" },
+  { slug: "numina", title: "Numina", tags: ["Python", "PyTorch", "Next.js"], accent: "#58A6FF" },
   { slug: "taskflow", title: "TaskFlow", tags: ["Next.js", "FastAPI", "PostgreSQL"], accent: "#7EE787" },
   { slug: "nexshop", title: "NexShop", tags: ["Next.js", "Supabase", "Stripe"], accent: "#D2A8FF" },
 ];

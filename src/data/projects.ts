@@ -34,12 +34,12 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "ai-scientific-calculator",
-    title: "AI Scientific Calculator",
+    slug: "numina",
+    title: "Numina",
     description:
-      "A smart scientific calculator powered by an AI math model fine-tuned from Qwen that parses and solves natural-language expressions.",
+      "Numina is a smart scientific calculator powered by an AI math model fine-tuned from Qwen — it parses natural-language expressions and solves them step by step.",
     tags: ["Python", "PyTorch", "Next.js"],
-    image: "/projects/ai-scientific-calculator.svg",
+    image: "/projects/numina.svg",
     liveUrl: null,
     repoUrl: "https://github.com/zico20",
   },
