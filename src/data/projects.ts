@@ -30,7 +30,7 @@ export const projects: Project[] = [
     tags: ["Python", "PyTorch", "FastAPI", "React"],
     image: "/projects/hazardsignal.svg",
     liveUrl: "https://hazardsignal.com",
-    repoUrl: "https://github.com/zico20",
+    repoUrl: "https://github.com/zico20/Hazardsignal",
     featured: true,
   },
   {
